@@ -1,0 +1,48 @@
+// Defining Variables
+//===========================================================================================//
+
+$color-primary-main: #538bf7;
+$color-primary-light: #bde4f9;
+$color-primary-dark: #3987cb;
+
+$color-sec-dark: #223345;
+$color-light-grey: #7d9eb5;
+
+$color-increment: #07c180;
+$color-decrement: #f42b3d;
+
+$color-black: #212121;
+$color-grey-dark: #cecece;
+$color-grey-light: #ececec;
+
+$color-white: #ffffff;
+
+$bg-color-white: #ffffff;
+$bg-color-light-sea: #eef3f6;
+
+$color-icon: #231f20;
+
+$font-family: 'Inter';
+
+
+
+// Your variable overrides
+$sidebar-bg-color: #ffffff;
+
+$sidebar-bg-color: #ffffff;
+$sidebar-color: $color-sec-dark;
+$sidebar-width: 320px;
+$sidebar-collapsed-width: 80px;
+$highlight-color: $color-primary-dark;
+$submenu-bg-color: #ffffff;
+$submenu-bg-color-collapsed: #ffffff;
+$icon-bg-color: #e9e9e9;
+$icon-size: 50px;
+$breakpoint-xs: 480px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+
+@import '~react-pro-sidebar/dist/scss/styles.scss';

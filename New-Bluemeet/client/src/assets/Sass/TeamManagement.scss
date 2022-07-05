@@ -1,0 +1,79 @@
+// Defining Variables
+//===========================================================================================//
+
+$color-primary-main: #538bf7;
+$color-primary-light: #bde4f9;
+$color-primary-dark: #3987cb;
+
+$color-sec-dark: #223345;
+$color-light-grey: #7d9eb5;
+
+$color-increment: #07c180;
+$color-decrement: #f42b3d;
+
+$color-black: #212121;
+$color-grey-dark: #cecece;
+$color-grey-light: #ececec;
+
+$color-white: #ffffff;
+
+$bg-color-white: #ffffff;
+$bg-color-light-sea: #eef3f6;
+
+$color-icon: #231f20;
+
+$font-family: 'Inter';
+
+// Team Management cards layout
+//===========================================================================================//
+
+.team-members-list-fields-container,
+.team-members-field-value-container {
+  display: grid;
+  grid-template-columns:  2fr 1.7fr 1.3fr 0.5fr;
+  grid-column-gap: 15px;
+}
+
+.pending-status-text-chip {
+   
+    border: 1px dashed hsla(220, 91%, 65%, 0.25);
+  border-radius: 2px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  /* identical to box height, or 150% */
+
+  color: #538bf7;
+}
+
+// Team Management number of members that can be added styling
+//===========================================================================================//
+
+.num-of-members-that-can-be-added-msg {
+  background-color: $color-primary-light;
+
+  text-align: center;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15px;
+
+  color: #212121;
+}
+
+
+.team-form-row-3-in-1 {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr ;
+  grid-column-gap: 20px;
+}
+
+.add-new-member-form {
+  // min-height: 380px;
+  height: 350px;
+ 
+}

@@ -1,0 +1,43 @@
+.QnA-container {
+  // height: 58px; // TODO Change it to auto
+  width: 100%;
+  border-radius: 5px;
+
+  background: rgba(255, 255, 255, 0.842);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.stage-card-name,
+.stage-card-company-and-profession {
+  font-size: 0.87rem;
+  font-weight: 500;
+  font-family: 'Inter';
+  color: #2e2d2d;
+}
+
+.stage-card-company-and-profession {
+  font-size: 0.8rem;
+}
+
+.upvote-btn {
+  background-color: #36363652;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  justify-self: flex-end;
+}
+
+.upvote-btn:hover {
+  background-color: #538bf7;
+  cursor: pointer;
+}
+
+.qnaQuesText {
+    font-size: 0.82rem;
+    color: #212121;
+    font-family: "Inter";
+    font-weight: 500;
+}

@@ -1,0 +1,81 @@
+.integration-card-container {
+  border: 1px solid rgb(195, 195, 195);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(196, 198, 219, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.integration-name {
+  font-weight: 600;
+  font-family: 'Ubuntu';
+  font-size: 1.1rem;
+  color: #212121;
+}
+
+.integration-short-description {
+  font-weight: 500;
+  font-size: 0.9rem;
+  font-family: 'Ubuntu';
+}
+
+.integration-side-drawer-form {
+  min-width: 600px;
+  max-width: 600px;
+}
+
+.want-help-heading {
+  font-weight: 500;
+  font-family: 'Ubuntu';
+  font-size: 1rem;
+  color: #212121;
+}
+
+.integration-guide-btn {
+  border: 1px solid #b8caec;
+  border-radius: 5px;
+
+  font-weight: 500;
+  font-family: 'Ubuntu';
+  font-size: 0.9rem;
+  color: #538bf7;
+  max-width: fit-content;
+}
+
+.integration-guide-btn:hover {
+  border: 1px solid #538bf7;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.form-small-text {
+  font-family: 'Ubuntu';
+  font-size: 0.8rem;
+}
+
+.tag {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  color: #538bf7;
+}
+
+.integration-tab {
+  font-family: 'Ubuntu';
+  color: #6b6b6b;
+  font-weight: 500;
+  padding-bottom: 1%;
+  border-bottom: 2px solid transparent;
+}
+
+.integration-tab:hover {
+  color: #212121;
+  cursor: pointer;
+}
+
+.active-integration-tab {
+  color: #212121;
+  border-bottom: 2px solid #538bf7;
+}

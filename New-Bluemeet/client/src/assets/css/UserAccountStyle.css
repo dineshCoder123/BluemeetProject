@@ -1,0 +1,335 @@
+.user-account-body {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  /* grid-column-gap: 25px; */
+}
+
+.sec-heading-close-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1rem;
+}
+
+.referral-3-cards-row {
+  /* max-width: 580px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.referral-display-card {
+  text-align: center;
+
+  height: 200px;
+  width: 100%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.17);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  justify-self: center;
+}
+
+.refer-and-earn-banner {
+  text-align: center;
+  font-family: "Ubuntu";
+  font-size: 0.94rem;
+  font-weight: 500;
+
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.109);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.bold-big-number {
+  font-family: "Ubuntu";
+  font-weight: 600;
+  font-size: 2.3rem;
+}
+
+.user-account-side-nav-bar,
+.user-account-main-body {
+  width: 100%;
+  background-color: #ffffff !important;
+  /* border: 2px solid red; */
+}
+
+.user-account-main-body {
+  background: #fffcfc 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 3px #00000029;
+  border-radius: 5px 0px 0px 5px;
+  opacity: 1;
+  height: fit-content;
+}
+
+.user-profile-tab,
+.user-community-tab {
+  /* border: 1px solid green; */
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.user-community-tab:hover {
+  background: #dbd1d172 0% 0% no-repeat padding-box;
+  box-shadow: 0 1px 2px #9c9c9c;
+  cursor: pointer;
+}
+
+.user-profile-tab {
+  background: #dbd1d172 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.user-profile-name,
+.community-profile-name {
+  text-align: left;
+  font: normal normal bold 1rem/1.5rem Helvetica;
+  letter-spacing: 0.35px;
+  color: #414141;
+  opacity: 1;
+}
+
+.user-profile-email {
+  text-align: left;
+  font: normal normal normal 0.87rem/1.5rem Helvetica;
+  letter-spacing: 0.28px;
+  color: #414141;
+  opacity: 1;
+}
+
+.user-community-tab-headline {
+  text-align: left;
+  font: normal normal 600 16px/24px Helvetica;
+  letter-spacing: 0.28px;
+  color: #414141;
+  opacity: 1;
+}
+
+.create-new-community-sidebar-btn {
+  width: 100%;
+}
+
+.user-account-main-body-home-content {
+  width: 100%;
+  /* display: grid;
+    grid-template-columns: 4fr;
+    grid-column-gap: 20px; */
+}
+
+.user-account-main-body-home-content-left {
+  width: 100%;
+  height: 100%;
+}
+
+.user-account-main-body-headline {
+  text-align: left;
+  font: normal normal bold 1.52rem/3.6rem Helvetica;
+  letter-spacing: 0.9px;
+  color: #2f2e2e;
+  opacity: 1;
+}
+
+.user-account-home-event-card-grid {
+  width: 100%;
+  /* border: 2px solid green; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.user-account-edit-profile {
+  width: 100%;
+  height: 100%;
+}
+
+.user-account-events-event-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 35px;
+}
+
+.user-account-booked-event-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 35px;
+}
+
+.page-user-account {
+  padding: 0;
+  /* overflow: auto; */
+  background-color: #ffffff;
+  height: 100vh;
+}
+
+.user-account-edit-profile {
+  width: 100%;
+  min-width: 720px;
+  max-width: 720px;
+  /* border: 1px solid #538BF7; */
+}
+
+.edit-profile-form-row {
+  width: 100%;
+  /* border: 2px solid peru; */
+  margin: 0;
+}
+
+.user-profile-booked-ticket-section {
+  /* /* width: 100%; */
+  min-width: 768px;
+  max-width: 1100px;
+  min-height: 100vh;
+}
+
+.booked-ticket-sub-heading {
+  text-align: left;
+  font: normal normal bold 1.15rem/2.5rem Helvetica;
+  letter-spacing: 0.68px;
+  color: #2f2e2e;
+  opacity: 1;
+}
+
+.user-account-main-body-home-content {
+  min-height: 85vh;
+}
+
+.overlay-form {
+  width: 650px;
+}
+
+.overlay-form-heading {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  /* or 67px */
+  text-align: center;
+  color: #538bf7;
+}
+
+.overlay-sub-form-heading {
+  margin-top: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.overlay-form-input-row {
+  width: 100%;
+}
+
+.form-check-label-consent {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13.7px;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+  color: #212121;
+}
+
+@media only screen and (max-width: 1700px) {
+  .user-account-events-event-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 35px;
+  }
+}
+
+@media only screen and (max-width: 1560px) {
+  .user-account-booked-event-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 35px;
+  }
+}
+
+@media only screen and (max-width: 1428px) {
+  .user-account-events-event-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 35px;
+  }
+
+  .user-account-home-event-card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  .user-profile-tab {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* .form-control {
+  margin: 0;
+} */
+
+.react-tel-input {
+  width: 100%;
+}
+
+input[type="tel"] {
+  width: 100% !important;
+}
+
+@media only screen and (max-width: 998px) {
+  .user-referral-container {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+
+  /* .user-referral-container {
+    min-width: 890px;
+    min-height: 600px;
+  } */
+
+  .sec-heading-close-row {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1rem;
+  }
+
+  .referral-3-cards-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (min-width: 998px) {
+  .user-referral-container {
+    min-width: 890px;
+    min-height: 600px;
+  }
+}
+
+.create-new-community-msg-container {
+  width: 85%;
+  margin: 3% auto;
+  height: auto;
+  /* TODO Change height to auto */
+
+  background: rgb(255, 255, 255);
+  box-shadow: 0 1px 2px 0 rgba(97, 97, 97, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.create-your-community-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Ubuntu";
+  color: #212121;
+}

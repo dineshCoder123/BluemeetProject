@@ -1,0 +1,15 @@
+.sessions-heading-and-search-box-wrapper-grid {
+  display: grid;
+  grid-template-columns: 0.5fr 4fr 0.5fr;
+  align-items: center;
+}
+
+.sessions-and-networking-body-heading {
+  justify-self: center;
+  text-align: center;
+
+  font: normal normal 500 20px/24px Ubuntu;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}

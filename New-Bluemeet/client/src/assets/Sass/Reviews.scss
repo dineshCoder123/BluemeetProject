@@ -1,0 +1,140 @@
+// Defining Variables
+//===========================================================================================//
+
+$color-primary-main: #538bf7;
+$color-primary-light: #bde4f9;
+$color-primary-dark: #3987cb;
+
+$color-sec-dark: #223345;
+$color-light-grey: #7d9eb5;
+
+$color-increment: #07c180;
+$color-decrement: #f42b3d;
+
+$color-black: #212121;
+$color-grey-dark: #cecece;
+$color-grey-light: #ececec;
+
+$color-white: #ffffff;
+
+$bg-color-white: #ffffff;
+$bg-color-light-sea: #eef3f6;
+
+$color-icon: #231f20;
+
+$font-family: 'Inter';
+
+// Event Reviews Content grid Styling
+//===========================================================================================//
+
+.event-reviews-content-grid {
+  //   border: 2px solid $color-increment;
+  display: grid;
+  grid-template-columns: 3fr 1.3fr;
+  grid-column-gap: 35px;
+}
+
+.review-cards-container {
+  min-height: 75.5vh;
+  background: #ffffff;
+  box-shadow: 0px 5px 20px rgba(176, 195, 211, 0.16);
+  border-radius: 20px;
+}
+
+.overall-audience-satisfaction-gauge-conatiner {
+  // min-height: 380px;
+  max-height: 340px;
+  background: #ffffff;
+  box-shadow: 0px 5px 20px rgba(176, 195, 211, 0.16);
+  border-radius: 20px;
+}
+
+// Review Card Styling
+//===========================================================================================//
+
+.review-card-wrapper {
+  width: 100%;
+  min-height: 160px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid $color-grey-dark;
+}
+
+.event-name-chip-review {
+  background: #bde4f9b9;
+  border-radius: 2px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  /* identical to box height, or 150% */
+
+  color: #538bf7;
+}
+
+.review-text-dashboard, .query-text-dashboard {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: #212121;
+     
+}
+
+// Side Gauge Chart Styling
+//===========================================================================================//
+
+.total-no-of-reviews {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+
+  color: #757575;
+  text-align: center;
+}
+
+.horizontally-centred {
+  display: flex;
+  justify-content: center;
+}
+
+.gauge-and-datalabel-wrapper {
+  position: relative;
+}
+
+.custom-gauge-datalabel {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 32px;
+  /* identical to box height, or 76% */
+
+  text-align: center;
+
+  color: #223345;
+}
+
+.lightly-styled-guage-label {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 32px;
+  /* identical to box height, or 100% */
+
+  text-align: center;
+
+  color: #757575;
+}

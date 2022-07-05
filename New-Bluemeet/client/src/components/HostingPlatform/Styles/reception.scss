@@ -1,0 +1,157 @@
+// width: 100%;
+//     min-height: 92vh;
+//     background: rgba(23, 23, 23, 0.794);
+//     box-shadow: 20px 20px 40px -6px rgb(0 0 0 / 20%);
+//     backdrop-filter: blur(4.5px);
+
+.reception-container {
+  //   display: grid;
+  //   grid-template-columns: 2fr 4fr 3fr;
+  //   grid-gap: 24px;
+  //   justify-items: center;
+
+  width: 100%;
+  min-height: 92vh;
+  box-shadow: 20px 20px 40px -6px rgb(0 0 0 / 20%);
+  backdrop-filter: blur(4.5px);
+}
+
+.opaque-layer {
+  position: absolute;
+  width: 100%;
+  min-height: 92vh !important;
+  background-color: #ffffff78;
+}
+
+.hosting-platform-basic-grid {
+  display: grid;
+  grid-template-columns: 5fr 1.2fr;
+}
+
+.diamond-sponsor-stand-container,
+.platinum-and-gold-sponsor-stand-container {
+  //   border: 1px solid green;
+  width: 100%;
+  align-items: center;
+}
+
+.platinum-and-gold-sponsor-stand-container {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  grid-gap: 48px;
+}
+
+.platinum-sponsor-stand {
+  height: 50vh;
+  width: 80%;
+  background-color: #fff;
+
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  //   clip-path: polygon(80% 0, 100% 10%, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
+  border-radius: 10px;
+}
+
+.gold-sponsor-stand {
+  height: 65vh;
+  width: 80%;
+  background-color: #fff;
+
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 6%);
+  border-radius: 10px;
+}
+
+.tv-and-quick-links-container {
+  //   border: 1px solid rgb(128, 0, 85);
+  width: 100%;
+  align-items: center;
+}
+
+.diamond-sponsor-stand {
+  height: 70vh;
+  width: 80%;
+  background-color: #fff;
+
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  clip-path: polygon(80% 0, 100% 8%, 100% 100%, 0 100%, 0 0);
+}
+
+.reception-quick-links-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+
+  width: 94.5%;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 4px;
+}
+
+.reception-tv-container,
+.reception-quick-links-wrapper {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40vh;
+}
+
+.reception-quick-links-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 28px;
+}
+
+.Rooms-quick-link,
+.Sessions-quick-link,
+.Booths-quick-link {
+  height: 30vh;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.Rooms-quick-link,
+.Booths-quick-link {
+  transform: translateY(17%);
+}
+
+.sponsor-stand-heading {
+  font-size: 0.87rem;
+  font-weight: 600;
+  font-family: 'Inter';
+  color: #212121;
+}
+
+.reception-event-name-heading {
+  font-weight: 700;
+  font-family: 'Ubuntu';
+  font-size: 1.5rem;
+  color: #103d10;
+  text-align: center;
+}
+
+.recepetion-host-name-and-follow-container {
+  text-align: end;
+  justify-self: flex-end;
+  border: 1px solid #538bf7;
+  border-radius: 5px;
+}
+
+.sponsor-stand-image:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}

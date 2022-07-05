@@ -1,0 +1,513 @@
+// Defining variables
+.hosting-platform-basic-grid {
+  height: 92vh;
+}
+
+$Side-Nav-bg-color: '#ffffff';
+$Shadow-inset-color: '#00000029';
+
+.lean-nav-wrapper {
+  height: 83vh;
+  overflow: auto !important;
+}
+
+// Defining Layout Grid
+.root-container-grid {
+  position: fixed;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 0.3fr 6.5fr;
+  width: 100% !important;
+}
+
+// Styling Side Nav
+.h-side-nav {
+  min-width: 90px;
+  background: $Side-Nav-bg-color 0% 0% no-repeat padding-box;
+  opacity: 1;
+  height: 100vh;
+}
+
+.community-logo-container {
+  height: auto;
+  min-width: 85px;
+  max-width: 90px;
+  width: 100%;
+  text-align: center;
+  margin-top: 7px;
+  // margin: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main-icon-btn-container {
+  height: 82vh;
+}
+
+.icon-wrapper {
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.icon-wrapper:hover {
+  background: #cecece3b 0% 0% no-repeat padding-box;
+}
+
+.active-wrapper-h {
+  background: #cecece3b 0% 0% no-repeat padding-box;
+}
+
+.icon-btn-h {
+  color: #696969;
+}
+
+.icon-btn-venue {
+  color: #d8d8d8;
+}
+
+.icon-btn-active-h {
+  color: #538bf7 !important;
+}
+
+.icon-btn-text {
+  font: normal normal 500 0.78rem/0.813rem Ubuntu;
+  letter-spacing: 0px;
+  color: #696969;
+  opacity: 1;
+}
+
+.icon-btn-text-venue {
+  font: normal normal 500 0.78rem/0.813rem Ubuntu;
+  letter-spacing: 0px;
+  color: #d8d8d8 !important;
+}
+
+.icon-btn-text-active-h {
+  color: #538bf7;
+}
+
+.mid-top-nav {
+  height: auto;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.event-name-l2 {
+  text-align: left;
+  font: normal normal bold 1.25rem/1.5rem Ubuntu;
+  letter-spacing: 0px;
+  color: #3c3a3a;
+  opacity: 1;
+}
+
+.avatar-menu-hello {
+  text-align: left;
+  font: normal normal 500 15px/17px Ubuntu;
+  letter-spacing: 0px;
+  color: #b9b8b8;
+}
+
+.avatar-menu-name-h {
+  text-align: left;
+  font: normal normal 500 15px/17px Ubuntu;
+  letter-spacing: 0px;
+  color: #707070;
+}
+
+.avatar-menu-h-wrapper {
+  background: #a3a2a21d 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.right-top-nav-h {
+  height: 8vh;
+}
+
+.main-body-content-h {
+  overflow-y: auto;
+  height: 92vh;
+}
+
+.event-banner-card {
+  width: 100%;
+  min-height: 300px;
+  box-shadow: 0px 0px 6px #00000029;
+  border-radius: 15px;
+  opacity: 1;
+}
+
+.banner-side-l {
+  width: 75%;
+}
+
+.banner-side-r {
+  width: 25%;
+}
+
+.welcome-to-text {
+  text-align: left;
+  font: normal normal 500 1.2rem/2.25rem Ubuntu;
+  letter-spacing: 0px;
+  color: #538bf7;
+  opacity: 1;
+}
+
+.event-big-name {
+  text-align: left;
+  font: normal normal 500 2.5rem/2.25rem Ubuntu;
+  letter-spacing: 0px;
+  color: #3c3a3a;
+}
+
+.event-banner-short-description {
+  text-align: left;
+  font: normal normal 500 1rem/1.5rem Ubuntu;
+  letter-spacing: 0px;
+  color: #747070;
+  opacity: 1;
+}
+
+.hosted-by-text {
+  text-align: left;
+  font: normal normal 500 0.9rem Ubuntu;
+  letter-spacing: 0px;
+  color: #a09b9b;
+  opacity: 1;
+}
+
+.hosted-by-community-name {
+  text-align: left;
+  font: normal normal 500 1.05rem/2.25rem Ubuntu;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+
+.lobby-nav-btn {
+  padding-bottom: 8px;
+  text-align: left;
+  font: normal normal 500 1.05rem/1.5rem Ubuntu;
+  color: #a3a2a2;
+  opacity: 1;
+  letter-spacing: 0px;
+}
+
+.lobby-nav-btn:hover {
+  cursor: pointer;
+}
+
+.session-switch {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 3px #00000029;
+  border-radius: 10px;
+}
+
+.session-btn-and-filter-search-wrapper {
+  width: 100%;
+}
+
+.session-card-list {
+  width: 100%;
+}
+
+.session-detail-card {
+  display: grid;
+  grid-template-columns: 0.6fr 4.5fr 1.15fr;
+  grid-column-gap: 1.8rem;
+
+  width: 100%;
+
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 3px #00000029;
+  border-radius: 10px;
+  opacity: 1;
+  // filter: blur(1px);
+}
+
+.session-date-day-time {
+  width: max-content;
+  background: #cecece3b 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.session-day {
+  text-align: left;
+  font: normal normal 500 1.125rem/1.313rem Ubuntu;
+  letter-spacing: 0px;
+  color: #bfb9b9;
+  opacity: 1;
+}
+
+.session-date {
+  text-align: left;
+  font: normal normal 500 1.125rem/1.313rem Ubuntu;
+  letter-spacing: 0px;
+  color: #a09797;
+  opacity: 1;
+}
+
+.session-time {
+  text-align: left;
+  font: normal normal 500 1.125rem/1.313rem Ubuntu;
+  letter-spacing: 0px;
+  color: #538bf7;
+  opacity: 1;
+}
+
+.session-title {
+  text-align: left;
+  font: normal normal 500 1.5rem/1.75rem Ubuntu;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+
+.session-duration {
+  max-width: 140px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 3px #00000029;
+  border-radius: 10px;
+  opacity: 1;
+
+  text-align: left;
+  font: normal normal 500 0.8rem/0.85rem Ubuntu;
+  letter-spacing: 0px;
+  color: #a09797;
+  opacity: 1;
+}
+
+.session-short-description {
+  text-align: left;
+  font: normal normal 500 0.9rem/1.72rem Ubuntu;
+  letter-spacing: 0px;
+  color: #b1aaaa;
+  opacity: 1;
+}
+
+.session-speakers-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 20px;
+}
+
+.session-speaker-card {
+  background: #cecece3b 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.speaker-card-name-h {
+  text-align: left;
+  font: normal normal 500 1rem/1.72rem Ubuntu;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+
+.speaker-card-about-h {
+  text-align: left;
+  font: normal normal 500 0.9rem/1.72rem Ubuntu;
+  letter-spacing: 0px;
+  color: #a7a3a3;
+  opacity: 1;
+}
+
+.btn-filled-h {
+  background: #538bf7d8 0% 0% no-repeat padding-box;
+  box-shadow: inset 0px 3px 6px #00000029;
+  border-radius: 10px;
+  opacity: 1;
+
+  text-align: left;
+  font: normal normal 500 1rem/1.75rem Ubuntu;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.event-platform-right-drawer {
+  width: 25rem;
+}
+
+.event-platform-side-drawer-heading {
+  font-family: 'Inter';
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.slider-nav-event-platform {
+  width: 100%;
+  height: 40px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 5px;
+  border: 1px solid rgba(73, 73, 73, 0.18);
+}
+
+.slider-nav-btn {
+  width: 45%;
+  height: 100%;
+  border-radius: 5px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  font-family: 'Inter';
+}
+
+.slider-nav-btn:hover {
+  cursor: pointer;
+}
+
+.slider-btn-active {
+  background-color: #e9e9e9;
+  color: #222222;
+  font-weight: 600;
+}
+
+.chat-msg-container {
+  height: 70vh;
+  width: 100%;
+  background: rgba(236, 236, 236, 0.664);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.people-container {
+  width: 100%;
+  height: 80vh;
+  border: 1px solid green;
+
+  background: rgba(236, 236, 236, 0.664);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.chat-msg-element {
+  width: 100%;
+}
+
+.chat-box-name,
+.host-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: 'Inter';
+}
+
+.alert-from-text {
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: 'Inter';
+}
+
+.chat-msg-text,
+.alert-text {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: 'Inter';
+}
+
+.scrollable-chat-element-container {
+  height: 93%;
+  margin-bottom: 12px;
+}
+
+.chat-msg-input-container {
+  margin-bottom: 2%;
+}
+
+.people-list-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 12px;
+}
+
+.people-headline {
+  font-size: 12px;
+  font-family: 'Inter';
+  font-weight: 500;
+}
+
+.people-location {
+  font-size: 11px;
+  font-family: 'Inter';
+  font-weight: 500;
+}
+
+.alert-element-container {
+  width: 100%;
+  box-shadow: 0 8px 32px 0 #abc5f845;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(65, 65, 65, 0.18);
+}
+
+.poll-element-wrapper {
+  background: rgba(255, 255, 255, 0.87);
+  box-shadow: 0 8px 32px 0 rgba(157, 162, 229, 0.17);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(139, 139, 139, 0.411);
+}
+
+.poll-question {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Inter';
+}
+
+.poll-option {
+  border: 1px solid #538bf7;
+
+  text-align: left;
+  font-size: 0.8rem;
+  color: #538bf7;
+  font-family: 'Inter';
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.time-left-poll-text {
+  font-size: 0.9rem;
+  color: #414141;
+  font-family: 'Inter';
+  font-weight: 600;
+}
+
+.time-left-in-min {
+  font-size: 0.9rem;
+  color: #5f5f5f;
+  font-family: 'Inter';
+  font-weight: 700;
+}
+
+.people-in-session-container {
+  height: 75vh;
+}
+
+.raised-hands-container {
+  height: 70vh;
+}
+
+@media only screen and (min-width: 1560px) {
+  .chat-msg-container {
+    height: 73vh;
+  }
+  .session-polls-container {
+    height: 73vh;
+  }
+
+  .people-in-session-container {
+    height: 78vh;
+  }
+
+  .scrollable-poll-element-container {
+    margin-bottom: 15px;
+  }
+}

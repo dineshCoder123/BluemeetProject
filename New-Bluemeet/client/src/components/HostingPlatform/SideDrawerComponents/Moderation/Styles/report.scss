@@ -1,0 +1,28 @@
+.report-actions-container {
+    min-width: 480px;
+    min-height: auto; // TODO Change it to auto
+}
+
+.confirm-action-heading {
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: "Ubuntu";
+    color: #212121;
+}
+
+.confirm-action-preview {
+    border-radius: 10px;
+    border: 1px solid #538bf7;
+}
+
+.action-confirmation-text {
+    font-weight: 500;
+    font-size: 0.9rem;
+    font-family: "Ubuntu";
+    color: grey;
+}
+
+.reported-msg-container {
+    border-radius: 10px;
+    border: 1px solid #538bf7;
+}

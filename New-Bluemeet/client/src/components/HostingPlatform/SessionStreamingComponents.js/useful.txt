@@ -1,0 +1,210 @@
+remotePlayerContainer.addEventListener("dblclick", () => {
+          
+        //   // play selected container as full screen - swap out current full screen stream
+        //   // remoteStreams[mainStreamId].stop(); // stop the main video stream playback
+        //   // addRemoteStreamMiniView(remoteStreams[mainStreamId]); // send the main video stream to a container
+        //   // $(containerId).empty().remove(); // remove the stream's miniView container
+        //   // remoteStreams[streamId].stop() // stop the container's video stream playback
+        //   // remoteStreams[streamId].play('full-screen-video'); // play the remote stream as the full screen video
+        //   // mainStreamId = streamId; // set the container stream id as the new main stream id
+
+        //   // remoteStreams[mainStreamId].stop();
+        //   rtc.localVideoTrack.stop();
+        //   addRemoteStreamMiniView(rtc.localVideoTrack, mainStreamId);
+        //   console.log(mainStreamId, "This is main stream Id");
+        //   // if (!mainStreamId) return;
+        //   document.getElementById(mainStreamId).remove();
+
+        //   document.getElementById(user.uid.toString()).remove();
+        //   remoteStreams[user.uid.toString()].stop();
+
+        //   const localPlayerContainer = document.createElement("div");
+        //   localPlayerContainer.id = user.uid.toString();
+        //   setMainStreamId(userId.toString());
+
+        //   const { userName, userImage, userOrganisation, userDesignation } =
+        //     peopleInThisSession.find((people) => people.userId === userId);
+
+        //   const userIdentity = document.createElement("div");
+        //   userIdentity.id = "user_identity";
+        //   userIdentity.style.position = "absolute";
+        //   userIdentity.style.left = "15px";
+        //   userIdentity.style.bottom = "15px";
+        //   userIdentity.style.color = "white";
+        //   userIdentity.style.padding = "12px";
+        //   userIdentity.style.boxSizing = "border-box";
+        //   userIdentity.style.zIndex = "10000000000000";
+        //   userIdentity.style.fontSize = "12px";
+        //   userIdentity.style.fontWeight = "500";
+        //   userIdentity.style.fontFamily = "Ubuntu";
+        //   userIdentity.style.backgroundColor = "#807F7F62";
+        //   userIdentity.style.borderRadius = "5px";
+        //   userIdentity.style.textTransform = "capitalize";
+
+        //   userIdentity.textContent = userName + ` (You)`;
+
+        //   const userCompanyAndDesignation = document.createElement("div");
+        //   // userCompanyAndDesignation.appendChild(MicNoneIcon);
+
+        //   // ReactDOM.render(document.getElementById('user_identity'), <MicNoneIcon />);
+
+        //   userCompanyAndDesignation.textContent =
+        //     userOrganisation + `, ${userDesignation}`;
+
+        //   userIdentity.appendChild(userCompanyAndDesignation);
+         
+        //   const userVideoAvatarContainer = document.createElement("img");
+        //   userVideoAvatarContainer.id = `avatar-box`;
+        //   userVideoAvatarContainer.src = userImage;
+
+        //   userVideoAvatarContainer.style.position = "absolute";
+        //   userVideoAvatarContainer.style.left = "50%";
+        //   userVideoAvatarContainer.style.bottom = "37.5%";
+        //   userVideoAvatarContainer.style.transform = "translate(-50%, -50%)";
+        //   userVideoAvatarContainer.style.maxHeight = "50px";
+        //   userVideoAvatarContainer.style.maxWidth = "50px";
+        //   // userVideoAvatarContainer.style.borderRadius = "50%";
+        //   userVideoAvatarContainer.style.boxSizing = "border-box";
+        //   userVideoAvatarContainer.style.zIndex = "10";
+
+        //   localPlayerContainer.append(userVideoAvatarContainer);
+          
+        //   localPlayerContainer.append(userIdentity);
+        //   localPlayerContainer.style.position = "relative";
+        //   localPlayerContainer.style.borderRadius = "10px";
+        //   localPlayerContainer.style.background = "rgba( 255, 255, 255, 0.25 )";
+        //   localPlayerContainer.style.backdropFilter = "blur( 4px )";
+        //   localPlayerContainer.style.zIndex = "101";
+        //   localPlayerContainer.style.height = "100%";
+        //   localPlayerContainer.style.width = "100%";
+
+        //   document
+        //     .getElementById("session-main-view-container")
+        //     .append(localPlayerContainer);
+
+        //   // document.body.append(localPlayerContainer);
+
+        //   // setGrid(
+        //   //   document.getElementById("session-stage-video-layout-grid")
+        //   //     .childElementCount
+        //   // );
+
+        //   remoteStreams[user.uid.toString()].play(localPlayerContainer);
+
+        //   document.getElementById(`avatar-box`).style.display = "none";
+
+        //   // document
+        //   // .getElementById("session-mini-view-container")
+        //   // .append(remotePlayerContainer);
+
+        //   // Play the remote video track.
+        //   // Pass the DIV container and the SDK dynamically creates a player in the container for playing the remote video track.
+        //   // remoteVideoTrack.play(remotePlayerContainer);
+        // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // REMOTE STREAMS UI
+    function addRemoteStreamMiniView(remoteStream, streamId) {
+      // var streamId = remoteStream.getId();
+
+      console.log(
+        streamId,
+        "This is the stream ID of previous main video track."
+      );
+
+      const remotePlayerContainer = document.createElement("div");
+      // Specify the ID of the DIV container. You can use the `uid` of the remote user.
+      remotePlayerContainer.id = streamId;
+
+      const { userName, userImage, userOrganisation, userDesignation } =
+        peopleInThisSession.find((people) => people.userId === streamId);
+
+      const userIdentity = document.createElement("div");
+      userIdentity.id = `user_identity_${streamId}`;
+      userIdentity.style.position = "absolute";
+      userIdentity.style.left = "15px";
+      userIdentity.style.bottom = "15px";
+      userIdentity.style.color = "white";
+      userIdentity.style.padding = "12px";
+      userIdentity.style.boxSizing = "border-box";
+      userIdentity.style.zIndex = "10000000000000";
+      userIdentity.style.fontSize = "12px";
+      userIdentity.style.fontWeight = "500";
+      userIdentity.style.fontFamily = "Ubuntu";
+      userIdentity.style.backgroundColor = "#807F7F62";
+      userIdentity.style.borderRadius = "5px";
+      userIdentity.style.textTransform = "capitalize";
+
+      userIdentity.textContent = userName;
+
+      const userCompanyAndDesignation = document.createElement("div");
+      // userCompanyAndDesignation.appendChild(MicNoneIcon);
+
+      // ReactDOM.render(document.getElementById('user_identity'), <MicNoneIcon />);
+
+      userCompanyAndDesignation.textContent =
+        userOrganisation + `, ${userDesignation}`;
+
+      userIdentity.appendChild(userCompanyAndDesignation);
+
+      const userVideoAvatarContainer = document.createElement("img");
+      userVideoAvatarContainer.id = `avatar-box_${streamId}`;
+      userVideoAvatarContainer.src = userImage;
+
+      userVideoAvatarContainer.style.position = "absolute";
+      userVideoAvatarContainer.style.left = "50%";
+      userVideoAvatarContainer.style.bottom = "37.5%";
+      userVideoAvatarContainer.style.transform = "translate(-50%, -50%)";
+      userVideoAvatarContainer.style.maxHeight = "50px";
+      userVideoAvatarContainer.style.maxWidth = "50px";
+      // userVideoAvatarContainer.style.borderRadius = "50%";
+      userVideoAvatarContainer.style.boxSizing = "border-box";
+      userVideoAvatarContainer.style.zIndex = "10";
+
+      remotePlayerContainer.append(userVideoAvatarContainer);
+      remotePlayerContainer.append(userIdentity);
+
+      remotePlayerContainer.style.borderRadius = "10px";
+      remotePlayerContainer.style.background = "rgba( 255, 255, 255, 0.25 )";
+      remotePlayerContainer.style.backdropFilter = "blur( 4px )";
+      remotePlayerContainer.style.backgroundColor = "#DBDBDB";
+      remotePlayerContainer.style.borderRadius = "5px";
+      remotePlayerContainer.style.width = "100%";
+      remotePlayerContainer.style.height = "31.6%";
+      remotePlayerContainer.style.marginBottom = "1rem";
+
+      // append the remote stream template to #remote-streams
+      document
+        .getElementById("session-mini-view-container")
+        .append(remotePlayerContainer);
+
+      remoteStream.play(remotePlayerContainer);
+
+      document.getElementById(`avatar-box`).style.display = "none";
+      // remoteStream.play('agora_remote_' + streamId);
+
+      // var containerId = '#' + streamId + '_container';
+
+      // $(containerId).dblclick(function() {
+      //   // play selected container as full screen - swap out current full screen stream
+      //   remoteStreams[mainStreamId].stop(); // stop the main video stream playback
+      //   addRemoteStreamMiniView(remoteStreams[mainStreamId]); // send the main video stream to a container
+      //   $(containerId).empty().remove(); // remove the stream's miniView container
+      //   remoteStreams[streamId].stop() // stop the container's video stream playback
+
+      //   remoteStreams[streamId].play('full-screen-video'); // play the remote stream as the full screen video
+      //   mainStreamId = streamId; // set the container stream id as the new main stream id
+      // });
+    }

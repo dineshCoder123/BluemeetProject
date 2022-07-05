@@ -1,0 +1,71 @@
+.full-page-body {
+  height: 100vh;
+  width: 100%;
+}
+
+.videoTag {
+    max-width: 160px;
+    max-height: 160px;
+}
+
+.simple-nav {
+  border-bottom: 1px solid #538bf7;
+}
+
+.compatibility-test-section {
+  background-color: #ffffff;
+  height: 93%;
+}
+
+.compatibility-box {
+  width: 768px;
+  height: auto;
+  border: 1px solid #538bf7;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.centered-box {
+  margin: 0 auto;
+}
+
+.video-and-audio-test-box {
+    height: auto;
+    background-color: #cdd7ec;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+.audio-level-indicator {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+
+
+.audio-level-1 {
+  border-radius: 25px;
+  background-color: #525252;
+  height: 4.5px;
+}
+
+.audio-indicator {
+  border-radius: 25px;
+  background-color: #538bf7;
+  height: 4.5px;
+}
+
+.video-test-box {
+    height: 220px;
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+.test-actions-btns {
+    border: 1px soild #538Bf7;
+    height: 100%;
+    width: 100%;
+}

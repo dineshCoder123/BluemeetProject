@@ -1,0 +1,140 @@
+
+google client id
+438235916836-6oaj1fbnqqrcd9ba30348fbe2ebn6lt0.apps.googleusercontent.com
+
+
+
+
+/////////////
+///////////Facebook sdk
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+/////////////////
+
+
+FACEBOOK LOGIN//
+// app.get("/api-eureka/eureka/v1/oauth/facebook/callback",catchAsync(async(req,res,next)=>{
+
+//     console.log(req.query.code,"I am counting on you req.query.code");
+
+//    const response= await  axios.get(`https://graph.facebook.com/v12.0/oauth/access_token?client_id=${process.env.FACEBOOK_CLIENT_ID}&client_secret=${process.env.FACEBOOK_CLIENT_SECRET}&code=${req.query.code}&redirect_uri=${process.env.FACEBOOK_REDIRECT_URI}`)
+
+//    console.log(response.data,"I am counting on you access token")
+
+
+
+// res.status(200).json({
+
+
+//   status:"success"
+// })
+
+
+
+// })
+// )
+//////////////////////////////////////////////////////
+
+
+
+
+WORKOS
+// const workos = new WorkOS(process.env.WORKOS_API_KEY);
+// const ssoClientId = process.env.WORKOS_CLIENT_ID;
+
+// app.get("/api-eureka/eureka/v1/auth/sso", (req, res) => {
+//   const domain = req.body.domain;
+//   const redirectURI = process.env.SS0_REDIRECT_URI;
+
+//   const authorizationURL = workos.sso.getAuthorizationURL({
+//     domain,
+//     redirectURI,
+//     ssoClientId,
+//   });
+
+//   res.redirect(authorizationURL);
+// });
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+typeof allStreams !== "undefined" &&
+                      allStreams.length > 0 ? (
+                      <div className="">
+                        {(() => {
+                          switch (view) {
+                            case "gallery":
+                              return (
+                                <GalleryView col={col} row={row}>
+                                  {allStreams &&
+                                    renderGalleryView(
+                                      allStreams,
+                                      peopleInThisSession
+                                    )}
+                                </GalleryView>
+                              );
+                            case "grid":
+                              return (
+                                <GridView>
+                                  {mainStream &&
+                                    renderMainStream(
+                                      mainStream,
+                                      peopleInThisSession
+                                    )}
+                                  <GridViewMini>
+                                    {miniStreams &&
+                                      renderMiniStreams(
+                                        miniStreams,
+                                        peopleInThisSession
+                                      )}
+                                  </GridViewMini>
+                                </GridView>
+                              );
+
+                            case "screenShare":
+                              return (
+                                <GridView>
+                                  {screenStream &&
+                                    renderScreenShareStream(
+                                      screenStream,
+                                      peopleInThisSession
+                                    )}
+                                  <GridViewMini>
+                                    {allStreams &&
+                                      renderMiniStreams(
+                                        allStreams,
+                                        peopleInThisSession
+                                      )}
+                                  </GridViewMini>
+                                </GridView>
+                              );
+
+                            default:
+                              break;
+                          }
+                        })()}
+                      </div>
+                    ) : (
+                      <NotYetStarted>{/* Render loader here */}</NotYetStarted>
+                    );

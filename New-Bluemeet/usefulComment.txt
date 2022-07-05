@@ -1,0 +1,119 @@
+  //     if (el.startDate > currentTime) {
+  //       el.status = 'upcoming';
+  //     } else if (el.startDate < currentTime && el.endDate > currentTime) {
+  //       el.status = 'ongoing';
+  //     }
+
+
+  // this piece of code is for nesting of ref
+  console.log(eventId);
+  let registrations;
+  for (let i = 0; i < eventId.length; i += 1) {
+    registrations = Event.find(eventId[i]).select('registrations');
+  }
+  registrations = Promise.all(registrations);
+  res.status(200).json({
+    status: 'success',
+  });
+
+  // related to map
+  communities: {
+      type:Map,
+      of:new mongoose.Schema({
+        role: {
+          type: String,
+          enum: ['superAdmin'],
+          default: 'superAdmin',
+        },
+      
+        communityId: {
+          type: mongoose.Schema.ObjectId,
+          ref: 'Community',
+          default: '609110268fb72211669e28c9',
+        },
+        
+      }
+      )
+    },
+
+
+    {
+        name: {
+          type: String,
+        },
+        description: {
+          type: String,
+        },
+        boothLogo: {
+          type: String,
+        },
+        boothPoster: {
+          type: String,
+        },
+        socialMediaHandles: {
+          type: Map,
+          of: String,
+        },
+        tags: [
+          {type: String,},
+        ],
+      },
+
+
+      team: {
+      members: [
+        {
+          id: {
+            type: mongoose.Schema.ObjectId,
+            ref: 'User',
+          },
+          memberName: {
+            type: String,
+          },
+          memberPhoto: {
+            type: String,
+          },
+          memberEmail: {
+            type: String,
+            lowercase: true,
+            validate: [validator.isEmail, 'Please provide a valid email'],
+          },
+          memberActivityDocId: {
+            type: mongoose.Schema.ObjectId,
+            ref: 'membersActivity',
+          },
+        },
+      ],
+      initialisedAt: {
+        type: Date,
+      },
+      lastModifiedAt: {
+        type: Date,
+        default: Date.now(),
+      },
+      maximumNumOfMembersAllowed: {
+        type: Number,
+      },
+      currentNumOfTeamMembers: {
+        type: Number,
+      },
+      communityActivityDocId: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'communityActivity',
+      },
+    },
+
+
+
+    callBackUrl
+    https://dry-gorge-84707.herokuapp.com/
+
+///////////////////////////////////
+    What you need: 
+    URLENCODE(redirectURI)=http%3A%2F%2F127.0.0.1%2Feureka%2Fv1%2Fauth%2Flinkedin
+--------------------
+Authorization Endpoint (Browser)
+What you need:
+scope=r_liteprofile
+
+http://www.linkedin.com/oauth/v2/authorization?response_type=code&state=987654321&scope=scope&client_id=clientId&redirect_uri=URLENCODE(redirectURI)

@@ -1,0 +1,154 @@
+$color-primary-main: #538bf7;
+$color-primary-light: #bde4f9;
+$color-primary-dark: #1b2653;
+
+$color-text-primary: #2a3e52;
+$color-black: #212121;
+$color-grey-dark: #cecece;
+$color-grey-light: #ececec;
+$color-white: #ffffff;
+$color-form-label: #393939;
+
+$font-family: 'Ubuntu';
+$font-family-sec: 'Lato';
+
+.auth-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 5fr 2.5fr;
+
+  .auth-left {
+    position: relative;
+    background-color: $color-primary-dark;
+    height: 100%;
+
+    .auth-left-content {
+      left: 17%;
+      top: 12%;
+    }
+  }
+
+  .auth-right {
+    height: 100%;
+
+    .auth-form-heading {
+      text-align: center;
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: 2rem;
+
+      letter-spacing: 0px;
+      color: $color-text-primary;
+      opacity: 1;
+    }
+
+    .oauth-btns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 24px;
+    }
+  }
+
+  .auth-hero-heading {
+    font-family: $font-family;
+    color: $color-white;
+
+    text-align: left;
+    // font: normal normal medium 68px/92px Ubuntu;
+    font-weight: 500;
+    font-size: 3.5rem;
+
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+  }
+
+  .auth-highlighted-feature {
+    text-align: left;
+    font-family: $font-family-sec;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.63px;
+    color: #ffffff;
+    opacity: 1;
+  }
+}
+
+.ouath-btn {
+  width: 100%;
+  background: $color-primary-main 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 1;
+
+  .oauth-logo {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    width: 35px;
+    height: 35px;
+  }
+
+  .text {
+    text-align: left;
+    font-family: $font-family;
+    font-size: 0.84rem;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+  }
+}
+
+.formatted-input {
+  margin-top: 5px !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  font-family: $font-family;
+  color: $color-grey-dark;
+  font-size: 0.9rem !important;
+}
+
+.icon-hover:hover{
+  cursor: pointer;
+  fill: #1b2653 !important;
+}
+
+.ui-form-label {
+  text-align: left !important;
+  font-weight: 500 !important;
+  font-family: 'Ubuntu' !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.48px !important;
+  color: $color-form-label;
+  opacity: 1;
+}
+
+.ui-btn-filled {
+  background-color: $color-primary-main;
+  border: 1px solid $color-primary-main;
+  width: 100%;
+  border-radius: 50px;
+
+  text-align: center;
+  font-family: $font-family;
+  font-size: 1rem;
+  letter-spacing: 0.66px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.form-link-text {
+  text-align: center;
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: $color-primary-main;
+
+  letter-spacing: 0.35px;
+
+  opacity: 1;
+}
+
+.form-text-gray {
+    color: $color-form-label;
+}

@@ -1,0 +1,683 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-position-fixed-non-scrollable-container {
+  width: 100vw;
+  position: fixed;
+  overflow: hidden;
+}
+
+.dashboard-event-section-head {
+  display: grid;
+  grid-template-columns: 0.7fr 9fr 3.5fr;
+  grid-gap: 24px;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.event-name-head-text {
+  font-family: "Ubuntu";
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #212121;
+}
+
+// Defining Variables
+//===========================================================================================//
+
+$color-primary-main: #538bf7;
+$color-primary-light: #bde4f9;
+$color-primary-dark: #3987cb;
+
+$color-sec-dark: #223345;
+$color-light-grey: #7d9eb5;
+
+$color-increment: #07c180;
+$color-decrement: #f42b3d;
+
+$color-black: #212121;
+$color-grey-dark: #cecece;
+$color-grey-light: #ececec;
+
+$color-white: #ffffff;
+
+$bg-color-white: #ffffff;
+$bg-color-light-sea: #eef3f6;
+
+$color-icon: #231f20;
+
+$font-family: "Ubuntu";
+
+// SideNav Styling
+//===========================================================================================//
+
+.dashboard-body {
+  display: grid;
+  grid-template-columns: 2fr 9fr;
+  background-color: $bg-color-light-sea;
+
+  .side-nav-wrapper {
+    // height: 100%;
+    min-width: 270px;
+    // border: 2px solid $color-primary-main;
+    background-color: $bg-color-white;
+
+    .dashboard-side-nav-btn {
+      width: 100%;
+      height: 45px;
+      background-color: $color-white;
+    }
+
+    .btn-active-d {
+      background-color: $color-primary-dark;
+    }
+
+    .btn-icon-active-d {
+      color: $color-white;
+    }
+
+    .btn-text-active-d {
+      color: $color-white;
+    }
+  }
+}
+
+.side-nav-wrapper {
+  height: 100%;
+  min-width: 270px;
+  // border: 2px solid $color-primary-main;
+  background-color: $bg-color-white;
+}
+
+.dashboard-side-nav-btn {
+  width: 100%;
+  height: 45px;
+  background-color: $color-white;
+}
+
+.btn-active-d {
+  background-color: $color-primary-main;
+}
+
+.btn-icon-active-d {
+  color: $color-white !important;
+}
+
+.btn-text-active-d {
+  color: $color-white !important;
+}
+
+.button-text-dashboard-sidenav {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: hsla(0, 0%, 13%, 0.603);
+}
+
+.sidenav-group-headline {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  color: $color-black;
+}
+
+.sidenav-icon {
+  color: $color-icon;
+}
+
+.dashboard-side-nav-btn:hover {
+  background-color: $color-primary-main !important;
+  cursor: pointer;
+
+  .sidenav-icon {
+    color: $color-white;
+  }
+
+  .button-text-dashboard-sidenav {
+    color: $color-white;
+  }
+}
+
+// Secondary Heading & drop selector Styling
+//===========================================================================================//
+
+.sec-heading-text {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  /* identical to box height, or 133% */
+  color: $color-sec-dark;
+}
+
+.drop-selector {
+  min-width: 200px;
+}
+
+// Overview Page Grid Layout
+//===========================================================================================//
+
+.main-content-wrapper {
+  max-width: 1500px;
+  overflow: auto;
+  height: 93vh !important;
+}
+
+.overview-content-grid {
+  display: grid;
+  grid-template-columns: 6fr 3fr;
+  grid-gap: 20px;
+  //   border: 2px solid green;
+  //   height: 100%; // TODO Make it auto
+}
+
+.recent-events-data-grid {
+  height: 600px; // TODO Make it auto later
+  background-color: $color-white;
+  box-shadow: 0px 5px 20px rgba(176, 195, 211, 0.16);
+  border-radius: 20px;
+}
+
+.number-card-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 35px;
+  height: 130px;
+  //   border: 2px solid pink;
+
+  .number-card {
+    height: 100%;
+    background-color: $color-white;
+    box-shadow: 0px 5px 20px rgba(176, 195, 211, 0.16);
+    border-radius: 20px;
+  }
+}
+.revenue-chart-container,
+.registrations-map-chart-container {
+  height: 440px;
+  background-color: $color-white;
+  box-shadow: 0px 5px 20px rgba(176, 195, 211, 0.16);
+  border-radius: 20px;
+}
+
+.registrations-map-chart-container {
+  height: 480px;
+}
+
+.plan-limit-indicator-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 24px;
+
+  .registrations-in-period,
+  .streaming-hours {
+    position: relative;
+    padding-top: 3%;
+    background: #f2f4fb;
+    border-radius: 20px;
+    height: 150px;
+  }
+}
+
+.chart-heading-registrations {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  /* identical to box height, or 133% */
+
+  color: $color-sec-dark;
+}
+
+.team-overview {
+  height: 592px;
+  background-color: $color-white;
+  box-shadow: 0px 5px 20px rgba(176, 195, 211, 0.16);
+  border-radius: 20px;
+}
+
+.top-events-card {
+  height: 652px;
+  background-color: $color-white;
+  box-shadow: 0px 5px 20px rgba(176, 195, 211, 0.16);
+  border-radius: 20px;
+}
+
+.number-card-heading {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.95rem;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+  color: $color-light-grey;
+}
+
+.num-text {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  /* identical to box height, or 133% */
+  color: $color-sec-dark;
+}
+
+.num-percent {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+}
+
+.team-overview-card-heading {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  /* identical to box height, or 133% */
+
+  color: $color-black;
+}
+
+.team-member-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-column-gap: 40px;
+}
+
+.team-member-name {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  /* identical to box height, or 171% */
+  color: $color-black;
+}
+
+.team-member-permission-chip {
+  background-color: #538af72a;
+  border-radius: 8px;
+  margin-left: 12%;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.85rem;
+  line-height: 1.5rem;
+  /* identical to box height, or 171% */
+  color: $color-black;
+}
+
+.btn-outline-text {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  /* identical to box height, or 171% */
+}
+
+.see-all-members {
+  text-decoration: underline;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.95rem;
+  line-height: 1rem;
+  color: $color-primary-dark;
+}
+
+.add-more-info {
+  text-align: center;
+  padding: 10% 0;
+  color: $color-black;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.91rem;
+  line-height: 15px;
+  background-color: #2121210a;
+  border-radius: 10px;
+}
+
+.radial-chart-container {
+  height: 100%;
+  width: 40%;
+  position: relative;
+}
+
+.percentage-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.1, 1.1);
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  /* identical to box height */
+
+  color: #538bf7;
+}
+
+.consumed-value {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 0.5px;
+  /* identical to box height, or 133% */
+  color: #416ed8;
+  display: flex;
+}
+
+.limit-value-small-text {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  /* identical to box height, or 114% */
+  display: flex;
+  align-items: center;
+  color: #494949;
+  mix-blend-mode: normal;
+  opacity: 0.7;
+}
+
+.limit-heading {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+  display: flex;
+  align-items: center;
+  color: #1f1f1f;
+  mix-blend-mode: normal;
+  opacity: 0.7;
+  margin-top: 4%;
+}
+
+.donut-chart-wrapper {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+}
+
+.center-label-wrapper {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+
+  text-align: center;
+
+  color: #223345;
+}
+
+.center-label-and-doughnut-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.center-label-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.increment {
+  color: $color-increment;
+}
+
+.decrement {
+  color: $color-decrement;
+}
+
+// Media Query
+//===========================================================================================//
+
+@media only screen and (max-width: 1400px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+  .sidenav-icon {
+    font-size: 22;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  html {
+    font-size: 14.8px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 14.5px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+.revenue-chart-container {
+  background: #ffffff;
+  box-shadow: 0px 5px 20px rgba(176, 195, 211, 0.16);
+  border-radius: 20px;
+
+  /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+}
+
+.custom-doughnut-datalabels-wrapper {
+  margin: 0 auto;
+  height: 200px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-doughnut-datalabel-row {
+  height: 46px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.color-label {
+  width: 5%;
+  height: 20px;
+  border-radius: 2px;
+}
+
+.text-label {
+  width: 83%;
+  height: auto;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+
+  color: #223345;
+  padding: 0 4%;
+}
+
+.percentage-label-doughnut {
+  width: 12%;
+  height: auto;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+  /* identical to box height, or 100% */
+
+  color: #1f78b4;
+}
+
+.event-edit-icon:hover {
+  color: $color-primary-main;
+  box-shadow: 1px #538bf7;
+  cursor: pointer;
+}
+
+.world-map-chart {
+  /* box-shadow: 0 0px 1px #212121 ; */
+  border-style: none;
+  outline: none;
+}
+
+.see-all-members:hover {
+  cursor: pointer;
+  color: $color-primary-dark;
+}
+
+.team-overview-and-top-events-row-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem;
+  height: 592px;
+}
+
+@media only screen and (max-width: "1480px") {
+  .overview-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .revenue-chart-container,
+  .registrations-map-chart-container {
+    height: auto;
+    min-height: 420px;
+  }
+
+  .top-events-card {
+    height: 592px;
+  }
+
+  .center-label-and-doughnut-wrapper {
+    width: 65%;
+    max-width: 350px;
+    margin-bottom: 1rem;
+  }
+
+  .team-and-top-events-bg-container {
+    display: none;
+  }
+
+  .team-overview-and-top-events-row-container {
+    margin-top: 0 !important;
+  }
+}
+@media only screen and (min-width: "1480px") {
+  .team-overview-and-top-events-row-container {
+    display: none;
+    margin-top: 0 !important;
+  }
+}
+@media only screen and (min-width: "1380px") {
+  .dash-root-menu {
+    display: none;
+  }
+}
+@media only screen and (max-width: "1380px") {
+  .dashboard-body {
+    grid-template-columns: 1fr;
+  }
+  // .dashboard-body-edit {
+  //   grid-template-columns: 2fr 9fr !important;
+  // }
+
+  // .side-nav-container {
+  //   display: none;
+  // }
+
+  .whats-new-button,
+  .dash-notification,
+  .dash-settings {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: "1441px") {
+  .publish-btn-lg {
+    display: inline-block;
+  }
+  .publish-btn-sm {
+    display: none;
+  }
+  .lg-side-nav,
+  .side-nav-wrapper {
+    display: inline-block;
+  }
+  .lean-side-nav {
+    display: none;
+  }
+  .dashboard-event-section-head {
+    grid-template-columns: 2fr 7fr 2fr;
+  }
+
+  .event-name-head-text {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+}
+
+@media only screen and (max-width: "1440px") {
+  .publish-btn-lg {
+    display: none;
+  }
+  .publish-btn-sm {
+    display: inline-block;
+  }
+  .dashboard-body {
+    grid-template-columns: 0.7fr 10fr;
+  }
+  .lg-side-nav,
+  .side-nav-wrapper {
+    display: none;
+  }
+  .lean-side-nav {
+    display: inline-block;
+  }
+}

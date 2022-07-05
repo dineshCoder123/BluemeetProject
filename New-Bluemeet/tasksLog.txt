@@ -1,0 +1,76 @@
+<=====================================>
+May-10
+------------------
+1) Speakers // ASSIGNED TO DINESH
+2) Sessions // ASSIGNED TO DINESH
+3) Booths   // ASSIGNED TO OP
+4) Sponsors // ASSIGNED TO OP
+
+***************************************
+SPEAKERS
+***************************************
+// 1) Community should be able to invite a speaker to his/her event by entering his/her email.
+// 2) After a speaker has been added to an event then community can assign that speaker to any session in that event.
+
+***************************************
+SESSIONS
+***************************************
+// 1) Community should be able to add multi track and multi sessions to his / her events.
+// 2) Community should be able to assign hosts and speakers to any session from the list of available team members and invited speakers.
+
+***************************************
+BOOTHS
+***************************************
+// 1) Community should be able to add booths to their events. (BOOTHS ARE EVENT SPECIFIC AND HAS A STRICT UPPER LIMIT. SO, IT'S GOING TO BE EMBEDDED IN THIER PARTICULAR EVENT DOCUMENTS.)
+
+***************************************
+SPONSORS
+***************************************
+// 1) Community should be able to add sponsors to their events. (SPONSORS ARE ALSO EVENT SPECIFIC WITH A STRICT UPPER LIMIT. SO, IT'S GOING TO BE EMBEDDED IN THIER PARTICULAR EVENT DOCUMENTS.)
+
+
+// app.get("/api-eureka/eureka/v1/auth/hubspot", async (req, res) => {
+//   res.redirect(
+//     `https://app-eu1.hubspot.com/oauth/authorize?client_id=e2dc5e5e-2dc5-4184-b93a-f33e19e78e03&redirect_uri=http://localhost:3000/api-eureka/eureka/v1/oauth/hubspot/callback&scope=content%20reports%20social%20automation%20timeline%20forms%20files%20hubdb%20crm.objects.contacts.read%20crm.objects.contacts.write`
+//   );
+// });
+
+// app.get("/api-eureka/eureka/v1/oauth/hubspot/callback", async (req, res) => {
+//   console.log(req.query.code, "i am counting on you hubspot code");
+
+//   const formData = {
+//     grant_type: "authorization_code",
+//     client_id: process.env.HUBSPOT_CLIENT_ID,
+//     client_secret: process.env.HUBSPOT_CLIENT_SECRET,
+//     redirect_uri: process.env.HUBSPOT_REDIRECT_URI,
+//     code: req.query.code,
+//   };
+
+//   const config = {
+//     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+//   };
+
+//   axios
+//     .post(
+//       "https://api.hubapi.com/oauth/v1/token",
+//       qs.stringify(formData),
+//       config
+//     )
+//     .then(
+//       catchAsync(async (response) => {
+//         console.log(response.data);
+//         accessToken = response.data.access_token;
+//         console.log(accessToken, "i am counting on you access token hubspot");
+//         await Hubspot.create({});
+
+//         //1. create hubspot document for  particular community
+//         //2. 
+//         res.status(200).json({
+//           status: "OK",
+//         });
+//       })
+//     )
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// });

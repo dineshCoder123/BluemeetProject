@@ -1,0 +1,62 @@
+$color-primary-main: #538bf7;
+$color-primary-light: #bde4f9;
+$color-primary-dark: #3987cb;
+
+$color-black: #212121;
+$color-grey-dark: #cecece;
+$color-grey-light: #ececec;
+
+$bg-color-white: #ffffff;
+$bg-color-light-sea: #eef3f6;
+
+$font-family: "Inter";
+
+.topnav-container {
+  width: 100%;
+  min-height: 7vh;
+  //   border: 2px solid $color-primary-main;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  background-color: $bg-color-white;
+  box-shadow: 5px 5px 10px rgba(133, 157, 177, 0.198);
+  border-bottom: 0.1px solid #21212113;
+
+  .left {
+    height: 100%;
+    // border: 2px solid $color-black;
+    display: flex;
+    align-items: center;
+
+    .brand-logo-text {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.375rem;
+      line-height: 2rem;
+      color: $color-primary-dark;
+
+      span {
+        font-weight: 600;
+        font-size: 1.1rem;
+        line-height: 2rem;
+      }
+    }
+  }
+
+  .right {
+    height: 100%;
+    // border: 2px solid $color-primary-light;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.avatar-menu-username {
+    font-family: $font-family;
+font-style: normal;
+font-weight: 600;
+font-size: 0.9rem;
+line-height: 18px;
+}

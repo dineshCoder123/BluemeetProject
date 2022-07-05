@@ -1,0 +1,44 @@
+.people-list-for-chat-container {
+  min-width: 480px;
+}
+
+.people-list-view-card {
+  // background-color: #8a8a8a5b;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+.view-full-profile-btn {
+  background-color: #ffffff;
+  color: #538bf7;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  font-family: 'Ubuntu';
+  text-align: center;
+}
+
+.view-full-profile-btn:hover {
+  cursor: pointer;
+}
+
+.individual-chat-summary-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.chat-summary {
+  border: 1px solid transparent;
+  border: 1px solid grey;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.chat-summary-msg-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
+}

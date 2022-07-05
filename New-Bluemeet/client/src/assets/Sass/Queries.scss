@@ -1,0 +1,77 @@
+// Defining Variables
+//===========================================================================================//
+
+$color-primary-main: #538bf7;
+$color-primary-light: #bde4f9;
+$color-primary-dark: #3987cb;
+
+$color-sec-dark: #223345;
+$color-light-grey: #7d9eb5;
+
+$color-increment: #07c180;
+$color-decrement: #f42b3d;
+
+$color-black: #212121;
+$color-grey-dark: #cecece;
+$color-grey-light: #ececec;
+
+$color-white: #ffffff;
+
+$bg-color-white: #ffffff;
+$bg-color-light-sea: #eef3f6;
+
+$color-icon: #231f20;
+
+$font-family: 'Inter';
+
+// Event Queries Card Styling
+//===========================================================================================//
+
+.answered-status-chip, .user-registration-status-chip {
+  border-radius: 2px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  /* identical to box height, or 150% */
+}
+
+.answered-status-chip {
+    background: #afeea6b9;
+    color: #067439;
+}
+
+.user-registration-status-chip {
+    background: #edeea6b9;
+    color: #607406;
+}
+
+.query-answer-input {
+    background: #ECECEC;
+border-radius: 10px;
+border: none;
+}
+
+.query-answer-input-d-row {
+    display: grid;
+    grid-template-columns: 16fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.queries-filter-label, .select input {
+    font-family: Inter;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+
+
+color: #757575;
+}
+
+// .select input {
+
+// }

@@ -1,0 +1,35 @@
+.registration-more-details-right-drawer {
+  width: auto; // This needs to be adjusted
+}
+
+.side-drawer-heading {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.side-drawer-more-details-content-section {
+  height: auto;
+}
+
+.side-drawer-content-row {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.side-drawer-main-content-text {
+  font-weight: 500;
+  color: #727272;
+  font-size: 15px;
+}
+
+.content-heading {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.registration-more-details-icon:hover {
+  cursor: pointer;
+  color: #538bf7;
+}

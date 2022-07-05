@@ -1,0 +1,283 @@
+$color-primary-main: #538bf7;
+$color-primary-light: #bde4f9;
+$color-primary-dark: #3987cb;
+
+$color-black: #212121;
+$color-grey-dark: #cecece;
+$color-grey-light: #ececec;
+
+$font-family: 'Inter';
+
+.events-list-fields-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.events-field-value-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-edit-field {
+  width: 4%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  /* padding: 1% 0% 0% 0%; */
+}
+
+.event-card-field {
+  width: 35%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  /* padding: 1% 0% 0% 0%; */
+}
+
+.event-visibility-field {
+  width: 9%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1% 0% 0% 0%; */
+}
+
+.event-status-field {
+  width: 9%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1% 0% 0% 0%; */
+}
+
+.event-views-field {
+  width: 10%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1% 0% 0% 0%; */
+}
+
+.event-registrations-field {
+  width: 11%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1% 0% 0% 0%; */
+}
+
+.event-running-status-field {
+  width: 11%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1% 0% 0% 0%; */
+}
+
+.event-stage-field {
+  width: 11%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1% 0% 0% 0%; */
+}
+
+.event-field-label,
+.registrations-field-label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+
+  color: #757575;
+}
+
+.registrations-field-label {
+  width: 100%;
+}
+
+.fa-pen:hover {
+  color: #538bf7;
+  filter: drop-shadow(0 0 0.75rem rgb(139, 139, 139));
+  cursor: pointer;
+}
+
+.event-name-short-description-card {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-name-and-description-wrapper {
+  height: 100%;
+  width: 53%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.event-name-d {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  color: #212121;
+}
+
+.event-short-description-d {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+
+  color: #757575;
+}
+
+.field-label-value {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 15px;
+  /* identical to box height */
+
+  color: #212121;
+}
+
+.registrations-field-value-modified {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+
+  color: #212121;
+}
+
+.see-all-text:hover {
+  color: #538bf7;
+  cursor: pointer;
+}
+
+.chip-btn-container {
+  background-color: #538bf7;
+  border-style: none;
+}
+
+.chip-btn-text {
+  color: #ffffff;
+}
+
+.chip-btn-text:hover {
+  color: #212121;
+}
+
+.chip-btn-container:hover {
+  background-color: transparent;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+// **********************************--------------- Registrations List Field Styling ---------------------**********************//
+
+.registrations-list-fields-container,
+.registrations-field-value-container {
+  display: grid;
+  grid-template-columns: 2fr 1.7fr 1.3fr 1fr 1fr 0.5fr;
+  grid-column-gap: 15px;
+}
+
+.session-list-fields-container,
+.session-field-value-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr 2fr 1fr;
+  grid-column-gap: 15px;
+}
+
+.registrations-name-field,
+.registrations-email-field,
+.registrations-phone-field,
+.registrations-ticket-type-field,
+.registrations-amount-field,
+.registrations-invoice-field {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-name-styled {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  color: #212121;
+}
+
+.session-field-label {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.session-card-speaker-grid {
+  width: 100%;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.ticketing-list-fields-container {
+  width: 100%;
+  display: grid !important;
+  grid-template-columns: 1.2fr 2.4fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
+}
+
+.sponsors-list-fields-container {
+  width: 100%;
+  display: grid !important;
+  grid-template-columns: 1fr 1.6fr 1.3fr 1fr 0.5fr;
+  grid-gap: 25px;
+}
+
+.speaker-card-session-grid {
+  width: 100%;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.networking-content-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 25px;
+}
+
+.networking-form {
+  background: #ffffff;
+  box-shadow: 0px 5px 20px rgba(176, 195, 211, 0.16);
+  border-radius: 20px;
+  min-height: 78vh;
+}

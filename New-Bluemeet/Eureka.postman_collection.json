@@ -1,0 +1,1024 @@
+{
+	"info": {
+		"_postman_id": "a8e5d1cd-6db5-4132-be67-620c1e4b3ab1",
+		"name": "Eureka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Signup",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"jwt\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"test\",\n    \"lastName\": \"1\",\n    \"email\": \"test1@gmail.com\",\n    \"password\": \"test1234\",\n    \"passwordConfirm\": \"test1234\",\n    \"policySigned\": \"true\",\n    \"subscribedToMailList\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}eureka/v1/users/signup",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"jwt\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test1@gmail.com\",\n    \"password\": \"test1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}eureka/v1/users/login",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "General Intent",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"whatAreYouPlanningToDo\" : \"I want to do both\",\n    \"interests\": [\"Technology\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}eureka/v1/registration/generalIntent",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"registration",
+								"generalIntent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Completion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"headline\": \"I want to do cool things. 😎 \",\n    \"socialMediaHandles\": {\n        \"facebook\": \"facebook.com/op\",\n        \"instagram\": \"www.instagram.com/shreyansh1057\",\n        \"twitter\": \"shah@OP\",\n        \"linkedIn\": \"https://www.linkedIn.com/in/shreyanshshah242\",\n        \"website\": \"http://www.linda.com\"\n    },\n    \"gender\": \"Female\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}eureka/v1/registration/profileCompletion",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"registration",
+								"profileCompletion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Community",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"community9\",\n    \"email\": \"community9@gmail.com\",\n    \"headline\": \"Testing on community 9\",\n    \"policySigned\": true,\n    \"subscribedToCommunityMailList\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}eureka/v1/users/new",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"users",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Events",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}eureka/v1/users/events/",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"users",
+								"events",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New review on an event ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rating\": 4,\n    \"reviewComment\": \"It was the best event I have ever attended.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}eureka/v1/users/events/review/609a53e147385e2a08ff5b20",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"users",
+								"events",
+								"review",
+								"609a53e147385e2a08ff5b20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Registering for an event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}eureka/v1/users/events/609a53e147385e2a08ff5b20",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"users",
+								"events",
+								"609a53e147385e2a08ff5b20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Query",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"questionText\": \"Would you provide recording of this event If I attend your event\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}eureka/v1/users/events/query/609a53e147385e2a08ff5b20",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"users",
+								"events",
+								"query",
+								"609a53e147385e2a08ff5b20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}eureka/v1/users/Me",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"users",
+								"Me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Me",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}eureka/v1/users/Me",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"users",
+								"Me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}eureka/v1/users/Me",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"users",
+								"Me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}eureka/v1/users/forgotPassword",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"users",
+								"forgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}eureka/v1/users/resetPassword",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"users",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Community",
+			"item": [
+				{
+					"name": "Community Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"jwt\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}eureka/v1/users/609a52ef47385e2a08ff5b0e",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"users",
+								"609a52ef47385e2a08ff5b0e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"eventName\": \"Art Masterclass\",\n    \"shortDescription\": \"Art Masterclass event hosted annually by BITS Pilani\",\n    \"visibility\": \"Public\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}eureka/v1/community/events/new",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"community",
+								"events",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a New coupon",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"discountDescription\": \"Early Bird Discount\",\n    \"discountPercentage\": 80,\n    \"couponCode\": \"EARLY80\",\n    \"maxNumOfDiscountPermitted\": 800\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}eureka/v1/community/coupons/609a53e147385e2a08ff5b20",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"community",
+								"coupons",
+								"609a53e147385e2a08ff5b20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one Event for a Community",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}eureka/v1/community/events/609189ab90b9792824944475",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"community",
+								"events",
+								"609189ab90b9792824944475"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Coupons for a community",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}eureka/v1/community/coupons",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"community",
+								"coupons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All registration in an event for a community",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}eureka/v1/community/registrations/609a53e147385e2a08ff5b20",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"community",
+								"registrations",
+								"609a53e147385e2a08ff5b20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Coupon",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"validTillDate\": \"2021-05-18T10:17:01.592Z\",\n            \"validTillTime\": \"2021-05-18T20:22:01.592Z\",\n            \"discountDescription\": \"Early Bird Discount for 50% discount\",\n            \"discountPercentage\": 50,\n            \"discountCode\": \"EARLY5000\",\n            \"maxNumOfDiscountPermitted\": 500\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}eureka/v1/community/coupons/609a552a47385e2a08ff5b29",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"community",
+								"coupons",
+								"609a552a47385e2a08ff5b29"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Coupon (set active to false)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}eureka/v1/community/coupons/609513b978607459e69acb58",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"community",
+								"coupons",
+								"609513b978607459e69acb58"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Reviews for a Community",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}eureka/v1/community/reviews",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"community",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Reviews for a Particular Event ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}eureka/v1/community/reviews/609270942709952ebb6de50f",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"community",
+								"reviews",
+								"609270942709952ebb6de50f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Creating community feedback",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"about booths in events\",\n    \"bodyOfFeedback\": \"you can add an option to list stores for sellers to create more value out of organising these events\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}eureka/v1/feedback/community",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"feedback",
+								"community"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Booth",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Evenz\",\n    \"description\": \"Event exploration, management and hosting platform\",\n    \"socialMediaHandles\": {\n        \"facebook\": \"facebbok.com/evenz\",\n        \"instagram\": \"www.instagram.com/evenz24\",\n        \"twitter\": \"https://www.twitter.com/@evenz67\",\n        \"linkedIn\": \"www.linkedIn.com/in/evenzCompany\",\n        \"website\": \"http://www.evenz.in\"\n    },\n    \"tags\": [\"events\", \"virtual-Platform\", \"sass\", \"Technology-Platform\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}eureka/v1/community/booths/609a53c647385e2a08ff5b1f",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"community",
+								"booths",
+								"609a53c647385e2a08ff5b1f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adding Sponsor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Amazon\",\n    \"status\": \"Gold\",\n    \"socialMediaHandles\": {\n        \"facebook\": \"facebbok.com/amazon\",\n        \"instagram\": \"www.instagram.com/amazon24\",\n        \"twitter\": \"https://www.twitter.com/@eamazon67\",\n        \"linkedIn\": \"www.linkedIn.com/in/amazonCompany\",\n        \"website\": \"http://www.amazon.in\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}eureka/v1/community/sponsors/609a53c647385e2a08ff5b1f",
+							"host": [
+								"{{URL}}eureka"
+							],
+							"path": [
+								"v1",
+								"community",
+								"sponsors",
+								"609a53c647385e2a08ff5b1f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get All Events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}eureka/v1/exploreEvents",
+					"host": [
+						"{{URL}}eureka"
+					],
+					"path": [
+						"v1",
+						"exploreEvents"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,111 @@
+// best in chrome
+$total: 1600; // total particles
+$orb-size: 320px;
+$particle-size: 2px;
+$time: 14s;
+$base-hue: 180; // change for diff colors (180 is nice)
+
+.particle-and-floating-avatar-container {
+  height: 700px;
+  border: 2px solid green;
+}
+
+.mission-statement-container {
+  max-width: 700px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 15px;
+
+  background: rgba(233, 233, 233, 0.205);
+  box-shadow: 0 8px 32px 0 #a9bde4;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.wrap-op {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  animation: rotate $time infinite linear; // rotate orb
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+.c {
+  position: absolute;
+  width: $particle-size;
+  height: $particle-size;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+@for $i from 1 through $total {
+  $z: (random(360) * 1deg); // random angle to rotateZ
+  $y: (random(360) * 1deg); // random to rotateX
+  $hue: ((40 / $total * $i) + $base-hue); // set hue
+
+  .c:nth-child(#{$i}) {
+    // grab the nth particle
+    animation: orbit#{$i} $time infinite;
+    animation-delay: ($i * 0.01s);
+    background-color: hsla($hue, 100%, 50%, 1);
+  }
+
+  @keyframes orbit#{$i} {
+    20% {
+      opacity: 1; // fade in
+    }
+    30% {
+      transform: rotateZ(-$z) rotateY($y) translateX($orb-size) rotateZ($z); // form orb
+    }
+    80% {
+      transform: rotateZ(-$z) rotateY($y) translateX($orb-size) rotateZ($z); // hold orb state 30-80
+      opacity: 1; // hold opacity 20-80
+    }
+    100% {
+      transform: rotateZ(-$z) rotateY($y) translateX(($orb-size * 3))
+        rotateZ($z); // translateX * 3
+    }
+  }
+}
+
+.particle-scatter-container {
+  min-height: 600px;
+}
+
+.mission-text {
+  font-family: Ubuntu;
+  letter-spacing: 0.8px;
+  word-spacing: 1.5px;
+  font-weight: 400;
+  text-align: center;
+  font-size: 1rem;
+
+}
+
+@media only screen and (min-width: 1280px) {
+  
+  .mission-statement-container {
+    min-width: 700px;
+  }
+
+}
+
+@media only screen and (max-width: 1280px) {
+  .mission-statement-container { 
+    margin: 0 2%;
+
+  }
+}
+
+

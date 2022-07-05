@@ -1,0 +1,1 @@
+// Pending registration invite by user email

@@ -1,0 +1,59 @@
+// Defining Variables
+//===========================================================================================//
+
+$color-primary-main: #538bf7;
+$color-primary-light: #bde4f9;
+$color-primary-dark: #3987cb;
+
+$color-sec-dark: #223345;
+$color-light-grey: #7d9eb5;
+
+$color-increment: #07c180;
+$color-decrement: #f42b3d;
+
+$color-black: #212121;
+$color-grey-dark: #cecece;
+$color-grey-light: #ececec;
+
+$color-white: #ffffff;
+
+$bg-color-white: #ffffff;
+$bg-color-light-sea: #eef3f6;
+
+$color-icon: #231f20;
+
+$font-family: 'Inter';
+
+// SideNav Styling
+//===========================================================================================//
+
+.event-poster-name-and-status-card {
+  height: 36%;
+}
+
+.side-nav-wrapper {
+  height: 86vh ;
+  overflow: auto !important;
+}
+
+.sidenav-poster-container {
+  max-height: 150px;
+
+  img {
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    max-height: 150px;
+  }
+}
+
+.sidenav-event-name {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  color: #212121;
+}

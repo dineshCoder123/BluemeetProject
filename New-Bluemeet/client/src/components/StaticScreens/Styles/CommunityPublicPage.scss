@@ -1,0 +1,45 @@
+.community-page-art {
+  height: 30vh;
+  width: 100%;
+  // border: 1px solid green;
+}
+
+.max-width-container-public-page {
+  // border: 1px solid green;
+  height: 800px;
+}
+
+.public-page-name {
+  font-family: 'Inter';
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 1.1rem;
+
+  color: black;
+}
+
+.community-total-registrations-and-events {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.community-public-page-grid-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 36px;
+}
+
+.tab {
+  font-family: 'Inter';
+  font-weight: 700;
+  padding-bottom: 1rem;
+  cursor: pointer;
+
+  border-bottom: 1px solid transparent;
+}
+
+.active-tab {
+  color: #538bf7;
+  border-bottom: 1px solid #538bf7;
+}

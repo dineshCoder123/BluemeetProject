@@ -1,0 +1,71 @@
+// Defining Variables
+//===========================================================================================//
+
+$color-primary-main: #538bf7;
+$color-primary-light: #bde4f9;
+$color-primary-dark: #3987cb;
+
+$color-sec-dark: #223345;
+$color-light-grey: #7d9eb5;
+
+$color-increment: #07c180;
+$color-decrement: #f42b3d;
+
+$color-black: #212121;
+$color-grey-dark: #cecece;
+$color-grey-light: #ececec;
+
+$color-white: #ffffff;
+
+$bg-color-white: #ffffff;
+$bg-color-light-sea: #eef3f6;
+
+$color-icon: #231f20;
+
+$font-family: 'Inter';
+
+// basics page grid layout styling
+//===========================================================================================//
+
+.basic-content-grid {
+  display: grid;
+  grid-template-columns: 6fr 2.5fr;
+  grid-column-gap: 1.5%;
+
+  min-height: 78vh;
+}
+
+.session-content-grid,
+.basic-form-left-white {
+  min-height: 78vh;
+}
+
+.basic-form-left {
+  height: 100%;
+
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.055);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+.basic-form-left-white {
+  background: #ffffff;
+  box-shadow: 0px 5px 20px rgba(176, 195, 211, 0.16);
+  border-radius: 20px;
+}
+
+.basic-form-right {
+  height: fit-content;
+
+  background: #ffffff;
+  box-shadow: 0px 5px 20px rgba(176, 195, 211, 0.16);
+  border-radius: 20px;
+}
+
+.event-poster-name-and-status-card {
+  margin-bottom: 24px;
+  min-height: 280px;
+}
